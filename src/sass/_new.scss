@@ -1,0 +1,20 @@
+.new {
+  padding: 8rem;
+  background-color: $color-very-dark-blue;
+  &__item {
+    padding: 5rem 0;
+
+    @include respond(phone) {
+      padding: 4rem 0;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 0.5px solid $color-off-white;
+    }
+  }
+
+  &__desciption {
+    color: $color-off-white;
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,48 @@
+.outstanding {
+  &-img {
+    width: 100%;
+  }
+
+  &__text-box {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10rem;
+    row-gap: 5rem;
+
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      margin-top: 1rem;
+    }
+  }
+
+  &__heading {
+    grid-row: 1 / span 2;
+  }
+
+  &__btn {
+    &,
+    &:link,
+    &:visited {
+      grid-column: 2 / span 1;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-color: $color-primary-soft-red;
+      display: inline-block;
+      color: $color-off-white;
+      font-weight: 600;
+      letter-spacing: 10px;
+      padding: 2rem 4rem;
+
+      transition: all 0.5s;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $color-very-dark-blue;
+    }
+  }
+}
